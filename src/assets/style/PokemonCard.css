@@ -2,7 +2,6 @@
   margin: 1rem;
   border-radius: 10px;
   padding: 1rem;
-  /* border: 1px solid black; */
   width: 16rem;
   min-height: 16rem;
   min-height: 20rem;
@@ -15,7 +14,6 @@
 .target img {
   width: 140px;
   margin-left: 20%;
-  /* border: 1px solid black; */
 }
 
 .target p {

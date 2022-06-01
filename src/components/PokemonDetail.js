@@ -11,12 +11,10 @@ import colors from "../colors.json";
 
 const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState({});
-  // const [color, setColor] = useState("");
   const { id } = useParams();
 
   useEffect(() => {
     axios
-      // .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126")
       .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((res) => setPokemon(res.data));
   }, [id]);
@@ -146,7 +144,6 @@ const PokemonDetail = () => {
         </div>
 
         <div className="containerMoves">
-          {/* <button>Encounters</button> */}
           <div className="moves">
             <div className="title">
               <div className="line"></div>

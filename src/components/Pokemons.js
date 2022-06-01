@@ -20,12 +20,10 @@ const Pokemons = () => {
   const [pokemonSearch, setPokemonSearch] = useState("");
   const [types, setTypes] = useState([]);
   const navigate = useNavigate();
-  // const [namePokemon,setNamePokemon]= useState("");
 
   useEffect(() => {
     axios
-      // .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126")
-      .get("https://pokeapi.co/api/v2/pokemon")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126")
       .then((res) => {
         setPokemons(res.data.results);
       });
@@ -43,7 +41,6 @@ const Pokemons = () => {
     axios.get(e.target.value).then((res) => setPokemons(res.data.pokemon));
   };
 
-
   const [page, setPage] = useState(1);
 
   const pokemonNumbers = 5;
@@ -56,7 +53,7 @@ const Pokemons = () => {
   for (let i = 1; i <= lastPage; i++) {
     numbers.push(i);
   }
-   console.log(pokemons);
+  console.log(pokemons);
 
   return (
     <div className="sectionPokemons">
@@ -105,7 +102,7 @@ const Pokemons = () => {
         </div>
       </div>
 
-      <div className="pages" >
+      <div className="pages">
         {numbers.map((number) => (
           <button onClick={() => setPage(number)}>{number} </button>
         ))}
