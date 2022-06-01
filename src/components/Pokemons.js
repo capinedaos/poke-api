@@ -20,6 +20,7 @@ const Pokemons = () => {
   const [pokemonSearch, setPokemonSearch] = useState("");
   const [types, setTypes] = useState([]);
   const navigate = useNavigate();
+  // const [namePokemon,setNamePokemon]= useState("");
 
   useEffect(() => {
     axios
@@ -42,9 +43,20 @@ const Pokemons = () => {
     axios.get(e.target.value).then((res) => setPokemons(res.data.pokemon));
   };
 
-  console.log("Me ejecute");
 
-  // console.log(pokemons);
+  const [page, setPage] = useState(1);
+
+  const pokemonNumbers = 5;
+  const lastIndex = pokemonNumbers * page;
+  const firstIndex = lastIndex - pokemonNumbers;
+  const pokemonPaginated = pokemons.slice(firstIndex, lastIndex);
+  const lastPage = Math.ceil(pokemons?.length / pokemonNumbers);
+
+  const numbers = [];
+  for (let i = 1; i <= lastPage; i++) {
+    numbers.push(i);
+  }
+   console.log(pokemons);
 
   return (
     <div className="sectionPokemons">
@@ -81,17 +93,26 @@ const Pokemons = () => {
           <button onClick={search}>Buscar</button>
         </div>
         <div className="arrow">
-          <button>
+          <button onClick={() => setPage(page - 1)} disabled={page === 1}>
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
-          <button>
+          <button
+            onClick={() => setPage(page + 1)}
+            disabled={page === lastPage}
+          >
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
       </div>
 
+      <div className="pages" >
+        {numbers.map((number) => (
+          <button onClick={() => setPage(number)}>{number} </button>
+        ))}
+      </div>
+
       <div className="containerPokemons">
-        {pokemons?.map((pokemon) => (
+        {pokemonPaginated?.map((pokemon) => (
           <PokemonCard
             key={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
             pokemonUrl={

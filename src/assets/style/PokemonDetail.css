@@ -22,18 +22,14 @@
   background-color: #fff;
   width: 100%;
   padding: 1rem;
-  /* margin: 1rem; */
   border-radius: 5px;
-  position: relative;
-  /* border: 1px solid black; */
 }
 
 .containerNameImg img {
-  /* border: 1px solid black; */
-  width: 400px;
-  position: absolute;
-  left: 35%;
-  top: -55%;
+  width: 500px;
+  margin-left: 33%;
+  margin-top: -14rem;
+  margin-bottom: -15%;
 }
 
 .logo img {
@@ -45,7 +41,7 @@
 
 .containerWeightHeight {
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-around;
   text-align: center;
   /* border: 1px solid black; */
   margin-top: 12rem;
@@ -54,13 +50,6 @@
 .number {
   font-size: 25px;
   font-weight: bold;
-}
-
-.weight,
-.height {
-  margin-left: 20%;
-  margin-right: 20%;
-  /* border: 1px solid black; */
 }
 
 .gray {
@@ -113,7 +102,7 @@
 }
 
 .display p {
-  background-color: Orange;
+  background-color: rgba(246, 245, 243, 0.625);
   width: 6rem;
   height: 2rem;
   margin: 1rem;
@@ -343,6 +332,60 @@ h2 {
   color: rgb(113, 108, 108);
 }
 
+@media (max-width: 1920px) {
+  .containerNameImg img {
+    width: 500px;
+    margin-top: -16rem;
+    margin-bottom: -12rem;
+    margin-left: 32%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .containerNameImg img {
+    width: 500px;
+    margin-top: -16rem;
+    margin-bottom: -12rem;
+    margin-left: 23%;
+    /* border: 1px solid black; */
+  }
+}
+
+@media (max-width: 1024px) {
+  .containerNameImg img {
+    width: 400px;
+    margin-top: -16rem;
+    margin-bottom: -12rem;
+    margin-left: 23%;
+  }
+
+  .containerNameImg {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardPokemon {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .containerCard {
+    flex-direction: column;
+  }
+
+  .itemsCardDetail {
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+
+  .containerMoves {
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 0rem;
+  }
+}
+
 @media (max-width: 480px) {
   .containerCard {
     width: 100%;
@@ -351,10 +394,9 @@ h2 {
   }
 
   .containerNameImg img {
-    /* border: 1px solid black; */
     width: 300px;
-    margin-top: 4rem;
-    margin-left: -2rem;
+    margin-left: 15%;
+    margin-bottom: -10rem;
   }
 
   .cardPokemon .link button {
@@ -433,37 +475,24 @@ h2 {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin: 0.5rem;
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
   .containerMoves h2 {
     width: 100%;
   }
-}
 
-@media (max-width: 768px) {
-  .cardPokemon {
-    margin: 0;
-    padding: 1rem;
+  .display {
+    margin-bottom: 1rem;
   }
 
-  .containerCard {
-    flex-direction: column;
+  .logo {
+    height: 8rem;
+    margin-bottom: 8rem;
+    /* margin-top: 1rem; */
   }
 
-  .itemsCardDetail {
-    /* border: 1px solid black; */
-    width: 100%;
-  }
-
-  .containerNameImg img {
-    left: 25%;
-  }
-
-  .containerMoves {
-    width: 100%;
-    margin-top: 1rem;
-    margin-left: 0rem;
+  .logo img {
+    margin-left: 3rem;
   }
 }
 
@@ -472,19 +501,20 @@ h2 {
     margin: 0;
     padding: 1rem;
   }
-
-  .containerNameImg img {
-    left: 3rem;
-    top: -10rem;
-    width: 250px;
+  .containerNameImg {
+    margin-top: -1rem;
   }
 
-  .containerCard {
-    margin-top: 3rem;
+  .containerNameImg img {
+    /* border: 1px solid black; */
+    width: 250px;
+    margin-left: 0rem;
+    margin-bottom: -10rem;
   }
 
   .logo img {
-    left: 1rem;
+    left: 0rem;
+    width: 250px;
   }
 
   .display {
@@ -492,25 +522,6 @@ h2 {
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 3rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .containerNameImg img {
-    /* border: 1px solid black; */
-    width: 400px;
-    position: absolute;
-    left: 9rem;
-    top: -12rem;
-  }
-}
-
-@media (max-width: 1366px) {
-  .containerNameImg img {
-    /* border: 1px solid black; */
-    width: 400px;
-    position: absolute;
-    left: 17rem;
-    top: -12rem;
+    margin-bottom: 1rem;
   }
 }

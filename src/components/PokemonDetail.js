@@ -82,7 +82,12 @@ const PokemonDetail = () => {
                 <div className="line"></div>
               </div>
 
-              <div className="display">
+              <div
+                className="display"
+                style={{
+                  background: backgroundCard(),
+                }}
+              >
                 {pokemon.types?.map((type) => (
                   <p key={uuiv4()}>{type.type.name}</p>
                 ))}
@@ -96,7 +101,12 @@ const PokemonDetail = () => {
                 <div className="line"></div>
               </div>
 
-              <div className="display">
+              <div
+                className="display"
+                style={{
+                  background: backgroundCard(),
+                }}
+              >
                 {pokemon.abilities?.map((abilitie) => (
                   <p key={uuiv4()}>{abilitie.ability.name}</p>
                 ))}
