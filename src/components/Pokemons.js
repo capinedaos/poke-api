@@ -43,7 +43,7 @@ const Pokemons = () => {
 
   const [page, setPage] = useState(1);
 
-  const pokemonNumbers = 5;
+  const pokemonNumbers = 8;
   const lastIndex = pokemonNumbers * page;
   const firstIndex = lastIndex - pokemonNumbers;
   const pokemonPaginated = pokemons.slice(firstIndex, lastIndex);
@@ -102,12 +102,6 @@ const Pokemons = () => {
         </div>
       </div>
 
-      <div className="pages">
-        {numbers.map((number) => (
-          <button onClick={() => setPage(number)}>{number} </button>
-        ))}
-      </div>
-
       <div className="containerPokemons">
         {pokemonPaginated?.map((pokemon) => (
           <PokemonCard
@@ -116,6 +110,12 @@ const Pokemons = () => {
               pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url
             }
           />
+        ))}
+      </div>
+
+      <div className="pages">
+        {numbers.map((number) => (
+          <button onClick={() => setPage(number)}>{number} </button>
         ))}
       </div>
     </div>
