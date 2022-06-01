@@ -23,8 +23,8 @@ const Pokemons = () => {
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126")
-      // .get("https://pokeapi.co/api/v2/pokemon")
+      // .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126")
+      .get("https://pokeapi.co/api/v2/pokemon")
       .then((res) => {
         setPokemons(res.data.results);
       });
@@ -35,18 +35,19 @@ const Pokemons = () => {
   }, []);
 
   const search = () => {
-    pokemonSearch.toLowerCase();
-    navigate(`/pokemons/${pokemonSearch}`);
+    navigate(`/pokemons/${pokemonSearch.toLowerCase()}`);
   };
 
   const filterPokemons = (e) => {
     axios.get(e.target.value).then((res) => setPokemons(res.data.pokemon));
   };
 
-  console.log(pokemons);
+  console.log("Me ejecute");
+
+  // console.log(pokemons);
 
   return (
-    <div>
+    <div className="sectionPokemons">
       <div className="welcome">
         <Link to="/" className="link">
           <button>
@@ -92,7 +93,7 @@ const Pokemons = () => {
       <div className="containerPokemons">
         {pokemons?.map((pokemon) => (
           <PokemonCard
-            key={uuiv4()}
+            key={pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url}
             pokemonUrl={
               pokemon.url !== undefined ? pokemon.url : pokemon.pokemon.url
             }

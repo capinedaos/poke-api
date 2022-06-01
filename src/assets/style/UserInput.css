@@ -63,12 +63,12 @@
   position: relative;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 600px) {
   .inputContainer img {
-    width: 5rem;
+    width: 6rem;
     position: absolute;
     left: 35%;
-    top: 1rem;
+    top: 4rem;
   }
 
   .inputContainer {
@@ -78,27 +78,32 @@
   }
 
   .inputContainer h1 {
-    margin-top: -2rem;
+    margin-top: 1rem;
     margin-bottom: 12rem;
   }
-
+  
   .inputContainer p {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 5px;
     height: 2rem;
     margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
   }
-
+  
   .input {
     width: 90%;
     margin-right: 2rem;
     height: 3rem;
     border-radius: 20px;
   }
-
+  
   .input button {
-    left: 82%;
+    left: 90%;
+    /* border: 1px solid black; */
   }
 }

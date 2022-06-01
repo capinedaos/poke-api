@@ -1,0 +1,82 @@
+[
+  {
+    "type": "normal",
+    "background": "DarkKhaki"
+  },
+  {
+    "type": "fighting",
+    "background": "PapayaWhip"
+  },
+  {
+    "type": "flying",
+    "background": "LightBlue"
+  },
+  {
+    "type": "poison",
+    "background": "LightSeaGreen"
+  },
+  {
+    "type": "ground",
+    "background": "Coral"
+  },
+  {
+    "type": "rock",
+    "background": "DarkGray"
+  },
+  {
+    "type": "bug",
+    "background": "LimeGreen"
+  },
+  {
+    "type": "ghost",
+    "background": "Black"
+  },
+  {
+    "type": "steel",
+    "background": "DimGray"
+  },
+  {
+    "type": "fire",
+    "background": "OrangeRed"
+  },
+  {
+    "type": "water",
+    "background": "PaleTurquoise"
+  },
+  {
+    "type": "grass",
+    "background": "LightSeaGreen"
+  },
+  {
+    "type": "electric",
+    "background": "Yellow"
+  },
+  {
+    "type": "psychic",
+    "background": "DarkSlateBlue"
+  },
+  {
+    "type": "ice",
+    "background": "AliceBlue"
+  },
+  {
+    "type": "dragon",
+    "background": "Red"
+  },
+  {
+    "type": "dark",
+    "background": "Black"
+  },
+  {
+    "type": "fairy",
+    "background": "DarkOrange"
+  },
+  {
+    "type": "unknown",
+    "background": "Teal"
+  },
+  {
+    "type": "shadow",
+    "background": "RosyBrown"
+  }
+]
