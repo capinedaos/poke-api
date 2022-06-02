@@ -42,7 +42,6 @@ const Pokemons = () => {
   };
 
   const [page, setPage] = useState(1);
-
   const pokemonNumbers = 8;
   const lastIndex = pokemonNumbers * page;
   const firstIndex = lastIndex - pokemonNumbers;
@@ -51,7 +50,9 @@ const Pokemons = () => {
 
   const numbers = [];
   for (let i = 1; i <= lastPage; i++) {
-    numbers.push(i);
+    if (i < page + 5 && i > page - 5) {
+      numbers.push(i);
+    }
   }
   console.log(pokemons);
 

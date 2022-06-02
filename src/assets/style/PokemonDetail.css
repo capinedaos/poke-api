@@ -333,6 +333,9 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .containerNameImg {
+    margin-top: 7rem;
+  }
   .cardPokemon {
     margin: 0;
     padding: 1rem;
@@ -458,13 +461,42 @@ h2 {
   }
 }
 
+@media (max-width: 360px) {
+  .cardPokemon {
+    margin: 0;
+    padding: 1rem;
+  }
+  .containerNameImg {
+    margin-top: 1rem;
+  }
+
+  .containerNameImg img {
+    width: 250px;
+    margin-left: 1rem;
+    margin-bottom: -10rem;
+  }
+
+  .logo img {
+    left: 0rem;
+    width: 250px;
+  }
+
+  .display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 320px) {
   .cardPokemon {
     margin: 0;
     padding: 1rem;
   }
   .containerNameImg {
-    margin-top: -1rem;
+    margin-top: 1rem;
   }
 
   .containerNameImg img {
